@@ -1,4 +1,4 @@
-import { Component, ComponentType, useState, useCallback, useMemo, memo, createContext, useContext } from 'react'
+import { ComponentType, useState, useCallback, useMemo, memo, createContext, useContext } from 'react'
 import type { ReactNode } from 'react'
 
 // ===========================
@@ -366,7 +366,7 @@ function useForm(initialValues: FormValues) {
 }
 
 // Custom hook for API calls
-function useAPI<T>(url: string) {
+export function _useAPI<T>(url: string) {
   const [data, setData] = useState<T | null>(null)
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState<string | null>(null)
@@ -572,7 +572,7 @@ type ToggleAction =
   | { type: 'SET_OFF' }
   | { type: 'RESET' }
 
-function toggleReducer(state: ToggleState, action: ToggleAction): ToggleState {
+export function _toggleReducer(state: ToggleState, action: ToggleAction): ToggleState {
   switch (action.type) {
     case 'TOGGLE':
       return { on: !state.on }
