@@ -56,7 +56,7 @@ class ClassCounter extends Component<ClassCounterProps, ClassCounterState> {
     console.log('ClassCounter mounted')
   }
 
-  componentDidUpdate(prevProps: ClassCounterProps, prevState: ClassCounterState) {
+  componentDidUpdate(_prevProps: ClassCounterProps, prevState: ClassCounterState) {
     if (prevState.count !== this.state.count) {
       console.log(`Count updated to: ${this.state.count}`)
     }
