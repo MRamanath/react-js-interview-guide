@@ -176,14 +176,18 @@ const ThemedComponent: React.FC = () => {
     <div 
       className="example"
       style={{
-        backgroundColor: theme === 'light' ? '#f0f0f0' : '#1a1a1a',
-        color: theme === 'light' ? '#000' : '#fff',
-        transition: 'all 0.3s'
+        backgroundColor: theme === 'light' ? 'rgba(255, 255, 255, 0.1)' : 'rgba(0, 0, 0, 0.3)',
+        color: 'var(--text-primary)',
+        transition: 'all 0.3s',
+        border: theme === 'light' ? '2px solid rgba(100, 150, 200, 0.5)' : '2px solid rgba(150, 100, 200, 0.5)'
       }}
     >
       <h4>useContext Example</h4>
       <p>Current theme: {theme}</p>
       <button onClick={toggleTheme}>Toggle Theme</button>
+      <p style={{ fontSize: '12px', marginTop: '10px', opacity: 0.7 }}>
+        (Context demo - not actual app theme)
+      </p>
     </div>
   )
 }

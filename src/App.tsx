@@ -21,6 +21,7 @@ import React18Features from './components/16-react-18'
 import { ReactRouterConcepts } from './components/17-routing'
 import { ReduxToolkitConcepts } from './components/18-redux-toolkit'
 import DocsViewer from './components/19-docs'
+import InterviewExamplesIndex from './components/examples'
 
 function App() {
   const [activeSection, setActiveSection] = useState<string>('fundamentals')
@@ -45,6 +46,7 @@ function App() {
     { id: 'routing', label: '17. 🧭 React Router', component: ReactRouterConcepts },
     { id: 'redux', label: '18. 🔴 Redux Toolkit', component: ReduxToolkitConcepts },
     { id: 'docs', label: '19. 📚 Documentation', component: DocsViewer },
+    { id: 'examples', label: '20. 🧪 Examples & Challenges', component: InterviewExamplesIndex },
   ]
 
   const ActiveComponent = sections.find(s => s.id === activeSection)?.component || FundamentalConcepts

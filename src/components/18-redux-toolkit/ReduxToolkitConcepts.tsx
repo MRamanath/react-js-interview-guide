@@ -1941,7 +1941,7 @@ function UsersComponent() {
       </div>
 
       {error && (
-        <div style={{ padding: '1rem', background: '#ffebee', color: '#c62828', borderRadius: '4px', marginBottom: '1rem' }}>
+        <div style={{ padding: '1rem', background: 'rgba(244, 67, 54, 0.15)', color: 'var(--text-primary)', borderRadius: '4px', marginBottom: '1rem', border: '1px solid rgba(244, 67, 54, 0.4)' }}>
           Error: {error}
         </div>
       )}
@@ -1990,16 +1990,16 @@ function UsersComponent() {
       )}
 
       {selectedUser && (
-        <div style={{ padding: '1rem', background: '#e8f5e9', borderRadius: '4px', border: '2px solid #4CAF50' }}>
+        <div style={{ padding: '1rem', background: 'rgba(76, 175, 80, 0.15)', borderRadius: '4px', border: '2px solid rgba(76, 175, 80, 0.5)' }}>
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-            <h4 style={{ margin: 0, color: '#1b5e20' }}>Selected User Details</h4>
+            <h4 style={{ margin: 0, color: 'var(--text-primary)' }}>Selected User Details</h4>
             <button onClick={() => dispatch(clearSelectedUser())}>Close</button>
           </div>
           <div style={{ marginTop: '1rem' }}>
-            <p style={{ color: '#1b5e20' }}><strong style={{ color: '#1b5e20' }}>Name:</strong> {selectedUser.name}</p>
-            <p style={{ color: '#1b5e20' }}><strong style={{ color: '#1b5e20' }}>Email:</strong> {selectedUser.email}</p>
-            <p style={{ color: '#1b5e20' }}><strong style={{ color: '#1b5e20' }}>Company:</strong> {selectedUser.company.name}</p>
-            <p style={{ color: '#1b5e20' }}><strong style={{ color: '#1b5e20' }}>ID:</strong> {selectedUser.id}</p>
+            <p style={{ color: 'var(--text-primary)' }}><strong style={{ color: 'var(--text-primary)' }}>Name:</strong> {selectedUser.name}</p>
+            <p style={{ color: 'var(--text-primary)' }}><strong style={{ color: 'var(--text-primary)' }}>Email:</strong> {selectedUser.email}</p>
+            <p style={{ color: 'var(--text-primary)' }}><strong style={{ color: 'var(--text-primary)' }}>Company:</strong> {selectedUser.company.name}</p>
+            <p style={{ color: 'var(--text-primary)' }}><strong style={{ color: 'var(--text-primary)' }}>ID:</strong> {selectedUser.id}</p>
           </div>
         </div>
       )}
